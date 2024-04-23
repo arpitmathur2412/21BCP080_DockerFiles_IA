@@ -2,7 +2,7 @@
 
 **Steps to create dockerfile**
 
--Use an official Node.js runtime as the base image. If the image does not exists in the
+- Use an official Node.js runtime as the base image. If the image does not exists in the
  local docker repository, it will pull it from docker hub.
 
 **FROM node:$VERSION**
