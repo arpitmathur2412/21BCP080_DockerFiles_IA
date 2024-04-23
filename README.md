@@ -2,25 +2,31 @@
 
 **Steps to create dockerfile**
 
-# Use an official Node.js runtime as the base image. If the image does not exists in the
-# local docker repository, it will pull it from docker hub.
-FROM node:$VERSION
+Use an official Node.js runtime as the base image. If the image does not exists in the
+local docker repository, it will pull it from docker hub.
 
-# Set the working directory inside the container
-WORKDIR /app
+**FROM node:$VERSION**
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+Set the working directory inside the container
+**WORKDIR /app**
 
-# Install the project dependencies from node package manager
-# If creating a nodejs server
-RUN npm install
+Copy package.json and package-lock.json to the working directory
 
-# Copy the rest of the backend code to the working directory
-COPY . .
+**COPY package*.json ./**
 
-# Expose the port on which your backend server will run
-EXPOSE $PORT
+Install the project dependencies from node package manager
+If creating a nodejs server
 
-# Start the backend server 
-CMD ["npm", "start"]
+**RUN npm install**
+
+Copy the rest of the backend code to the working directory
+
+**COPY . .**
+
+ Expose the port on which your backend server will run
+
+**EXPOSE $PORT**
+
+Start the backend server 
+
+**CMD ["npm", "start"]**
