@@ -23,10 +23,10 @@ If creating a nodejs server
 
 **COPY . .**
 
-- Expose the port on which your backend server will run
+- Expose the port on which your backend server will run on
 
 **EXPOSE $PORT**
 
-- Start the backend server 
+- Start the server from start scripts
 
 **CMD ["npm", "start"]**
